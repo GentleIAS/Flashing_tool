@@ -1,0 +1,42 @@
+[17:21:18]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:21:18]:GetScriptDevices
+[17:21:22]:add device ba86eaa index 0
+[17:25:04]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:25:04]:GetScriptDevices
+[17:25:04]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[17:25:04]:add device ba86eaa index 1
+[17:25:57]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:25:57]:GetScriptDevices
+[17:25:57]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[17:25:57]:add device ba86eaa index 1
+[17:26:01]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:02]:GetScriptDevices
+[17:26:02]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[17:26:02]:add device ba86eaa index 1
+[17:26:02]:Thread start,thread id 11,thread name ba86eaa
+[17:26:02]:start process id 9284 name cmd
+[17:34:14]:Thread stopped, thread id 11, thread name ba86eaa
+[17:35:06]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:35:06]:GetScriptDevices
+[17:35:06]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[17:35:06]:add device ba86eaa index 1
+[17:35:35]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:35:35]:GetScriptDevices
+[17:35:35]:add device ba86eaa index 1
+[17:35:37]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:35:37]:GetScriptDevices
+[17:35:37]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[17:35:37]:add device ba86eaa index 1
+[17:35:37]:Thread start,thread id 9,thread name ba86eaa
+[17:35:37]:start process id 4768 name cmd
+[17:43:50]:Thread stopped, thread id 9, thread name ba86eaa
+[18:21:36]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[18:21:36]:GetScriptDevices
+[18:21:37]:add device ba86eaa index 1
+[18:21:40]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[18:21:40]:GetScriptDevices
+[18:21:40]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[18:21:40]:add device ba86eaa index 1
+[18:21:40]:Thread start,thread id 9,thread name ba86eaa
+[18:21:40]:start process id 27756 name cmd
+[18:29:54]:Thread stopped, thread id 9, thread name ba86eaa

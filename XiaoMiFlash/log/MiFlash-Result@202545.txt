@@ -1,0 +1,1 @@
+[22:56:07]:1    ae7e553e     488.63669s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done

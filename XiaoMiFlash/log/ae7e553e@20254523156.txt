@@ -1,0 +1,10 @@
+[23:01:56  ae7e553e]:MiFlash 2020.3.14.0
+[23:01:56  ae7e553e]:vboytest index:0
+[23:01:56  ae7e553e]:idproduct: 0 idvendor: 0
+[23:01:56  ae7e553e]:Thread id:31 Thread name:ae7e553e
+[23:01:56  ae7e553e]:image path:D:\Desktop\socrates_images_OS2.0.103.0.VMKCNXM_20250319.0000.00_15.0_cn_41bb075296\socrates_images_OS2.0.103.0.VMKCNXM_15.0
+[23:01:56  ae7e553e]:env android path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Google\Android"
+[23:01:56  ae7e553e]:script :D:\Desktop\socrates_images_OS2.0.103.0.VMKCNXM_20250319.0000.00_15.0_cn_41bb075296\socrates_images_OS2.0.103.0.VMKCNXM_15.0\flash_all.bat
+[23:01:56  ae7e553e]:Physical Memory Usage:4030464 Byte
+[23:01:56  ae7e553e]:start process id 14508 name cmd
+[23:01:56  ae7e553e]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *socrates"   || echo Missmatching image and device 

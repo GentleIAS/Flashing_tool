@@ -1,0 +1,19 @@
+[18:43:46]:open RegistryKey Software\XiaoMi\MiFlash\
+[18:43:46]:create RegistryKey Software\XiaoMi\MiFlash\
+[18:43:46]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Google\Driver\android_winusb.inf to C:\WINDOWS\INF\oem51.inf,result True,GetLastWin32Error 
+[18:43:46]:set RegistryKey value:android_winusb.inf--oem51.inf
+[18:43:46]:mkdir "C:\Users\20372\.android"
+[18:43:46]:output:
+[18:43:46]: echo 0x2717 >>"C:\Users\20372\.android\adb_usb.ini"
+[18:43:46]:output:
+[18:43:46]:open RegistryKey Software\XiaoMi\MiFlash\
+[18:43:46]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Nvidia\Driver\NvidiaUsb.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[18:43:46]:open RegistryKey Software\XiaoMi\MiFlash\
+[18:43:47]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Microsoft\Driver\tetherxp.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[18:43:47]:open RegistryKey Software\XiaoMi\MiFlash\
+[18:43:47]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Microsoft\Driver\wpdmtphw.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[18:43:47]:open RegistryKey Software\XiaoMi\MiFlash\
+[18:43:47]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\Driver\qcser.inf to C:\WINDOWS\INF\oem52.inf,result True,GetLastWin32Error 
+[18:43:47]:set RegistryKey value:qcser.inf--oem52.inf
+[18:49:36]:lsusb path:"D:\Desktop\鍒锋満宸ュ叿\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[18:49:36]:GetScriptDevices

@@ -1,0 +1,37 @@
+[14:16:00  ae7e553e]:MiFlash 2020.3.14.0
+[14:16:00  ae7e553e]:vboytest index:1
+[14:16:00  ae7e553e]:idproduct: 53261 idvendor: 6353
+[14:16:00  ae7e553e]:Thread id:9 Thread name:ae7e553e
+[14:16:00  ae7e553e]:image path:D:\Desktop\socrates_images_OS1.0.9.0.UMKCNXM_20240516.0000.00_14.0_cn_406bfc6edd\socrates_images_OS1.0.9.0.UMKCNXM_14.0
+[14:16:00  ae7e553e]:env android path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Google\Android"
+[14:16:00  ae7e553e]:script :D:\Desktop\socrates_images_OS1.0.9.0.UMKCNXM_20240516.0000.00_14.0_cn_406bfc6edd\socrates_images_OS1.0.9.0.UMKCNXM_14.0\flash_all_lock.bat
+[14:16:00  ae7e553e]:Physical Memory Usage:3604480 Byte
+[14:16:00  ae7e553e]:start process id 14316 name cmd
+[14:16:00  ae7e553e]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *socrates"   || echo Missmatching image and device 
+[14:16:00  ae7e553e]:info1:product: socrates
+[14:16:00  ae7e553e]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *socrates"   || exit /B 1 
+[14:16:00  ae7e553e]:info1:product: socrates
+[14:16:00  ae7e553e]:info1:$if exist "D:\Desktop\socrates_images_OS1.0.9.0.UMKCNXM_20240516.0000.00_14.0_cn_406bfc6edd\socrates_images_OS1.0.9.0.UMKCNXM_14.0\images\anti_version.txt" (for /F "usebackq" %a in ("D:\Desktop\socrates_images_OS1.0.9.0.UMKCNXM_20240516.0000.00_14.0_cn_406bfc6edd\socrates_images_OS1.0.9.0.UMKCNXM_14.0\images\anti_version.txt") do (set CURRENT_ANTI_VER=%a ) ) 
+[14:16:00  ae7e553e]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[14:16:00  ae7e553e]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[14:16:00  ae7e553e]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[14:16:00  ae7e553e]:info1:$if [] EQU [] set version=0 
+[14:16:00  ae7e553e]:info1:$set anticheck="antirollback check pass" 
+[14:16:00  ae7e553e]:info1:$if 0 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[14:16:00  ae7e553e]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[14:16:00  ae7e553e]:info1:"antirollback check pass" 
+[14:16:00  ae7e553e]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[14:16:00  ae7e553e]:info1:fastboot -s devicename flash crclist D:\Desktop\socrates_images_OS1.0.9.0.UMKCNXM_20240516.0000.00_14.0_cn_406bfc6edd\socrates_images_OS1.0.9.0.UMKCNXM_14.0\images\crclist.txt   ||  
+[14:16:00  ae7e553e]:info1: fastboot -s devicename flash sparsecrclist D:\Desktop\socrates_images_OS1.0.9.0.UMKCNXM_20240516.0000.00_14.0_cn_406bfc6edd\socrates_images_OS1.0.9.0.UMKCNXM_14.0\images\sparsecrclist.txt   || 
+[14:16:00  ae7e553e]:info1:) 
+[14:16:00  ae7e553e]:info1:$fastboot -s devicename erase boot_ab   || 
+[14:16:00  ae7e553e]:info2:Erasing 'boot_ab'                                  FAILED (remote: 'Partition doesn't exist')
+[14:16:00  ae7e553e]:info2:fastboot: error: Command failed
+[14:16:00  ae7e553e]:info1:"Erase boot error" 
+[14:16:00  ae7e553e]:begin FlashDone
+[14:16:00  ae7e553e]:error:Erasing 'boot_ab'                                  FAILED (remote: 'Partition doesn't exist')
+[14:16:00  ae7e553e]:process exit.
+[14:16:00  ae7e553e]:flashSuccess False
+[14:16:00  ae7e553e]:isFactory False CheckCPUID False
+[14:16:00  ae7e553e]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[14:16:00  ae7e553e]:after:flashSuccess is False set IsUpdate:false set IsDone true

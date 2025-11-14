@@ -1,0 +1,23 @@
+[13:42:46]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[13:42:46]:GetScriptDevices
+[13:46:47]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[13:46:47]:GetScriptDevices
+[13:46:47]:add device ae7e553e index 1
+[13:47:00]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[13:47:00]:GetScriptDevices
+[13:47:00]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[13:47:00]:add device ae7e553e index 1
+[13:47:00]:Thread start,thread id 11,thread name ae7e553e
+[13:47:00]:start process id 8012 name cmd
+[13:55:18]:Thread stopped, thread id 11, thread name ae7e553e
+[13:59:20]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[13:59:20]:GetScriptDevices
+[13:59:20]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[13:59:20]:add device ae7e553e index 1
+[13:59:22]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[13:59:22]:GetScriptDevices
+[13:59:22]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[13:59:22]:add device ae7e553e index 1
+[13:59:22]:Thread start,thread id 10,thread name ae7e553e
+[13:59:22]:start process id 18240 name cmd
+[14:07:36]:Thread stopped, thread id 10, thread name ae7e553e

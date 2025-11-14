@@ -1,0 +1,13 @@
+[0:38:07]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[0:38:07]:GetScriptDevices
+[0:38:07]:add device ba86eaa index 1
+[0:47:37]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[0:47:37]:GetScriptDevices
+[0:47:37]:add device ba86eaa index 1
+[0:47:55]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[0:47:55]:GetScriptDevices
+[0:47:55]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[0:47:55]:add device ba86eaa index 1
+[0:47:55]:Thread start,thread id 9,thread name ba86eaa
+[0:47:55]:start process id 9956 name cmd
+[0:56:04]:Thread stopped, thread id 9, thread name ba86eaa

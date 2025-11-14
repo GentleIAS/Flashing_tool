@@ -1,0 +1,298 @@
+[13:26:06  ba86eaa]:MiFlash 2020.3.14.0
+[13:26:06  ba86eaa]:vboytest index:1
+[13:26:06  ba86eaa]:idproduct: 53261 idvendor: 6353
+[13:26:06  ba86eaa]:Thread id:18 Thread name:ba86eaa
+[13:26:06  ba86eaa]:image path:D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0
+[13:26:06  ba86eaa]:env android path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Google\Android"
+[13:26:06  ba86eaa]:script :D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\flash_all.bat
+[13:26:06  ba86eaa]:Physical Memory Usage:4915200 Byte
+[13:26:06  ba86eaa]:start process id 21040 name cmd
+[13:26:06  ba86eaa]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *liuqin"   || echo Missmatching image and device 
+[13:26:06  ba86eaa]:info1:product: liuqin
+[13:26:06  ba86eaa]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *liuqin"   || exit /B 1 
+[13:26:06  ba86eaa]:info1:product: liuqin
+[13:26:06  ba86eaa]:info1:$if exist "D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images\anti_version.txt" (for /F "usebackq" %a in ("D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images\anti_version.txt") do (set CURRENT_ANTI_VER=%a ) ) 
+[13:26:06  ba86eaa]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[13:26:06  ba86eaa]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[13:26:06  ba86eaa]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[13:26:06  ba86eaa]:info1:$(set version=1 ) 
+[13:26:06  ba86eaa]:info1:$if [1] EQU [] set version=0 
+[13:26:06  ba86eaa]:info1:$set anticheck="antirollback check pass" 
+[13:26:06  ba86eaa]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[13:26:06  ba86eaa]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[13:26:06  ba86eaa]:info1:"antirollback check pass" 
+[13:26:06  ba86eaa]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[13:26:06  ba86eaa]:info1:fastboot -s devicename flash crclist D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images\crclist.txt   ||  
+[13:26:06  ba86eaa]:info1: fastboot -s devicename flash sparsecrclist D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images\sparsecrclist.txt   || 
+[13:26:06  ba86eaa]:info1:) 
+[13:26:06  ba86eaa]:info1:crc: 1
+[13:26:06  ba86eaa]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.002s]
+[13:26:06  ba86eaa]:info2:Writing 'crclist'                                  OKAY [  0.003s]
+[13:26:06  ba86eaa]:info2:Finished. Total time: 0.025s
+[13:26:06  ba86eaa]:info2:Sending 'sparsecrclist' (0 KB)                     OKAY [  0.002s]
+[13:26:06  ba86eaa]:info2:Writing 'sparsecrclist'                            OKAY [  0.001s]
+[13:26:06  ba86eaa]:info2:Finished. Total time: 0.022s
+[13:26:06  ba86eaa]:info1:$fastboot -s devicename erase boot_ab   || 
+[13:26:06  ba86eaa]:info2:Erasing 'boot_ab'                                  (bootloader) Partition boot_a erase successfully
+[13:26:06  ba86eaa]:info2:(bootloader) Partition boot_b erase successfully
+[13:26:06  ba86eaa]:info2:OKAY [  0.045s]
+[13:26:06  ba86eaa]:info2:Finished. Total time: 0.055s
+[13:26:06  ba86eaa]:info1:$fastboot -s devicename flash abl_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/abl.elf   || 
+[13:26:07  ba86eaa]:info2:Sending 'abl_ab' (199 KB)                          OKAY [  0.006s]
+[13:26:07  ba86eaa]:info2:Writing 'abl_ab'                                   (bootloader) Partition abl_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition abl_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.013s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.050s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash xbl_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/xbl_s.melf   || 
+[13:26:07  ba86eaa]:info2:Sending 'xbl_ab' (1066 KB)                         OKAY [  0.029s]
+[13:26:07  ba86eaa]:info2:Writing 'xbl_ab'                                   (bootloader) Partition xbl_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition xbl_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.050s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.105s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash xbl_config_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/xbl_config.elf   || 
+[13:26:07  ba86eaa]:info2:Sending 'xbl_config_ab' (111 KB)                   OKAY [  0.004s]
+[13:26:07  ba86eaa]:info2:Writing 'xbl_config_ab'                            (bootloader) Partition xbl_config_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition xbl_config_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.012s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.038s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash shrm_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/shrm.elf   || 
+[13:26:07  ba86eaa]:info2:Sending 'shrm_ab' (62 KB)                          OKAY [  0.003s]
+[13:26:07  ba86eaa]:info2:Writing 'shrm_ab'                                  (bootloader) Partition shrm_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition shrm_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.005s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.027s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash aop_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/aop.mbn   || 
+[13:26:07  ba86eaa]:info2:Sending 'aop_ab' (230 KB)                          OKAY [  0.006s]
+[13:26:07  ba86eaa]:info2:Writing 'aop_ab'                                   (bootloader) Partition aop_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition aop_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.015s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.041s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash aop_config_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/aop_devcfg.mbn   || 
+[13:26:07  ba86eaa]:info2:Sending 'aop_config_ab' (15 KB)                    OKAY [  0.002s]
+[13:26:07  ba86eaa]:info2:Writing 'aop_config_ab'                            (bootloader) Partition aop_config_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition aop_config_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.003s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.024s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash tz_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/tz.mbn   || 
+[13:26:07  ba86eaa]:info2:Sending 'tz_ab' (3816 KB)                          OKAY [  0.091s]
+[13:26:07  ba86eaa]:info2:Writing 'tz_ab'                                    (bootloader) Partition tz_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition tz_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.169s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.300s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash devcfg_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/devcfg.mbn   || 
+[13:26:07  ba86eaa]:info2:Sending 'devcfg_ab' (55 KB)                        OKAY [  0.002s]
+[13:26:07  ba86eaa]:info2:Writing 'devcfg_ab'                                (bootloader) Partition devcfg_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition devcfg_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.005s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.029s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash featenabler_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/featenabler.mbn   || 
+[13:26:07  ba86eaa]:info2:Sending 'featenabler_ab' (92 KB)                   OKAY [  0.004s]
+[13:26:07  ba86eaa]:info2:Writing 'featenabler_ab'                           (bootloader) Partition featenabler_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition featenabler_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.009s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.032s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash hyp_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/hypvmperformance.mbn   || 
+[13:26:07  ba86eaa]:info2:Sending 'hyp_ab' (1226 KB)                         OKAY [  0.028s]
+[13:26:07  ba86eaa]:info2:Writing 'hyp_ab'                                   (bootloader) Partition hyp_a flashed successfully
+[13:26:07  ba86eaa]:info2:(bootloader) Partition hyp_b flashed successfully
+[13:26:07  ba86eaa]:info2:OKAY [  0.058s]
+[13:26:07  ba86eaa]:info2:Finished. Total time: 0.110s
+[13:26:07  ba86eaa]:info1:$fastboot -s devicename flash uefi_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/uefi.elf   || 
+[13:26:08  ba86eaa]:info2:Sending 'uefi_ab' (2695 KB)                        OKAY [  0.060s]
+[13:26:08  ba86eaa]:info2:Writing 'uefi_ab'                                  (bootloader) Partition uefi_a flashed successfully
+[13:26:08  ba86eaa]:info2:(bootloader) Partition uefi_b flashed successfully
+[13:26:08  ba86eaa]:info2:OKAY [  0.120s]
+[13:26:08  ba86eaa]:info2:Finished. Total time: 0.210s
+[13:26:08  ba86eaa]:info1:$fastboot -s devicename flash uefisecapp_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/uefi_sec.mbn   || 
+[13:26:08  ba86eaa]:info2:Sending 'uefisecapp_ab' (167 KB)                   OKAY [  0.005s]
+[13:26:08  ba86eaa]:info2:Writing 'uefisecapp_ab'                            (bootloader) Partition uefisecapp_a flashed successfully
+[13:26:08  ba86eaa]:info2:(bootloader) Partition uefisecapp_b flashed successfully
+[13:26:08  ba86eaa]:info2:OKAY [  0.012s]
+[13:26:08  ba86eaa]:info2:Finished. Total time: 0.037s
+[13:26:08  ba86eaa]:info1:$fastboot -s devicename flash modem_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/NON-HLOS.bin   || 
+[13:26:11  ba86eaa]:info2:Sending 'modem_ab' (111348 KB)                     OKAY [  2.790s]
+[13:26:15  ba86eaa]:info2:Writing 'modem_ab'                                 (bootloader) Partition modem_a flashed successfully
+[13:26:15  ba86eaa]:info2:(bootloader) Partition modem_b flashed successfully
+[13:26:15  ba86eaa]:info2:OKAY [  4.731s]
+[13:26:15  ba86eaa]:info2:Finished. Total time: 7.544s
+[13:26:15  ba86eaa]:info1:$fastboot -s devicename flash bluetooth_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/BTFM.bin   || 
+[13:26:15  ba86eaa]:info2:Sending 'bluetooth_ab' (2188 KB)                   OKAY [  0.062s]
+[13:26:16  ba86eaa]:info2:Writing 'bluetooth_ab'                             (bootloader) Partition bluetooth_a flashed successfully
+[13:26:16  ba86eaa]:info2:(bootloader) Partition bluetooth_b flashed successfully
+[13:26:16  ba86eaa]:info2:OKAY [  0.096s]
+[13:26:16  ba86eaa]:info2:Finished. Total time: 0.180s
+[13:26:16  ba86eaa]:info1:$fastboot -s devicename flash dsp_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/dspso.bin   || 
+[13:26:17  ba86eaa]:info2:Sending 'dsp_ab' (65536 KB)                        OKAY [  1.599s]
+[13:26:20  ba86eaa]:info2:Writing 'dsp_ab'                                   (bootloader) Partition dsp_a flashed successfully
+[13:26:20  ba86eaa]:info2:(bootloader) Partition dsp_b flashed successfully
+[13:26:20  ba86eaa]:info2:OKAY [  2.787s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 4.406s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash keymaster_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/keymint.mbn   || 
+[13:26:20  ba86eaa]:info2:Sending 'keymaster_ab' (359 KB)                    OKAY [  0.009s]
+[13:26:20  ba86eaa]:info2:Writing 'keymaster_ab'                             (bootloader) Partition keymaster_a flashed successfully
+[13:26:20  ba86eaa]:info2:(bootloader) Partition keymaster_b flashed successfully
+[13:26:20  ba86eaa]:info2:OKAY [  0.019s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 0.049s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash qupfw_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/qupv3fw.elf   || 
+[13:26:20  ba86eaa]:info2:Sending 'qupfw_ab' (49 KB)                         OKAY [  0.003s]
+[13:26:20  ba86eaa]:info2:Writing 'qupfw_ab'                                 (bootloader) Partition qupfw_a flashed successfully
+[13:26:20  ba86eaa]:info2:(bootloader) Partition qupfw_b flashed successfully
+[13:26:20  ba86eaa]:info2:OKAY [  0.005s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 0.027s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash multiimgoem_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/multi_image.mbn   || 
+[13:26:20  ba86eaa]:info2:Sending 'multiimgoem_ab' (32 KB)                   OKAY [  0.002s]
+[13:26:20  ba86eaa]:info2:Writing 'multiimgoem_ab'                           (bootloader) Partition multiimgoem_a flashed successfully
+[13:26:20  ba86eaa]:info2:(bootloader) Partition multiimgoem_b flashed successfully
+[13:26:20  ba86eaa]:info2:OKAY [  0.005s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 0.029s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash multiimgqti_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/multi_image_qti.mbn   || 
+[13:26:20  ba86eaa]:info2:Sending 'multiimgqti_ab' (11 KB)                   OKAY [  0.002s]
+[13:26:20  ba86eaa]:info2:Writing 'multiimgqti_ab'                           (bootloader) Partition multiimgqti_a flashed successfully
+[13:26:20  ba86eaa]:info2:(bootloader) Partition multiimgqti_b flashed successfully
+[13:26:20  ba86eaa]:info2:OKAY [  0.006s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 0.031s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash cpucp_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/cpucp.elf   || 
+[13:26:20  ba86eaa]:info2:Sending 'cpucp_ab' (156 KB)                        OKAY [  0.005s]
+[13:26:20  ba86eaa]:info2:Writing 'cpucp_ab'                                 (bootloader) Partition cpucp_a flashed successfully
+[13:26:20  ba86eaa]:info2:(bootloader) Partition cpucp_b flashed successfully
+[13:26:20  ba86eaa]:info2:OKAY [  0.011s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 0.036s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash rtice D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images\rtice.mbn   || 
+[13:26:20  ba86eaa]:info2:Sending 'rtice' (340 KB)                           OKAY [  0.009s]
+[13:26:20  ba86eaa]:info2:Writing 'rtice'                                    OKAY [  0.016s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 0.047s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash logfs D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/logfs_ufs_8mb.bin   || 
+[13:26:20  ba86eaa]:info2:Sending 'logfs' (16 KB)                            OKAY [  0.001s]
+[13:26:20  ba86eaa]:info2:Writing 'logfs'                                    OKAY [  0.002s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 0.020s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash rescue D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/rescue.img   || 
+[13:26:20  ba86eaa]:info2:Sending 'rescue' (40 KB)                           OKAY [  0.003s]
+[13:26:20  ba86eaa]:info2:Writing 'rescue'                                   OKAY [  0.003s]
+[13:26:20  ba86eaa]:info2:Finished. Total time: 0.023s
+[13:26:20  ba86eaa]:info1:$fastboot -s devicename flash storsec D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/storsec.mbn   || 
+[13:26:21  ba86eaa]:info2:Sending 'storsec' (31 KB)                          OKAY [  0.003s]
+[13:26:21  ba86eaa]:info2:Writing 'storsec'                                  OKAY [  0.003s]
+[13:26:21  ba86eaa]:info2:Finished. Total time: 0.027s
+[13:26:21  ba86eaa]:info1:$fastboot -s devicename flash toolsfv D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/tools.fv   || 
+[13:26:21  ba86eaa]:info2:Sending 'toolsfv' (384 KB)                         OKAY [  0.011s]
+[13:26:21  ba86eaa]:info2:Writing 'toolsfv'                                  OKAY [  0.003s]
+[13:26:21  ba86eaa]:info2:Finished. Total time: 0.034s
+[13:26:21  ba86eaa]:info1:$fastboot -s devicename flash xbl_ramdump_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/XblRamdump.elf   || 
+[13:26:21  ba86eaa]:info2:Sending 'xbl_ramdump_ab' (847 KB)                  OKAY [  0.019s]
+[13:26:21  ba86eaa]:info2:Writing 'xbl_ramdump_ab'                           (bootloader) Partition xbl_ramdump_a flashed successfully
+[13:26:21  ba86eaa]:info2:(bootloader) Partition xbl_ramdump_b flashed successfully
+[13:26:21  ba86eaa]:info2:OKAY [  0.009s]
+[13:26:21  ba86eaa]:info2:Finished. Total time: 0.055s
+[13:26:21  ba86eaa]:info1:$fastboot -s devicename flash xbl_sc_test_mode D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/xbl_sc_test_mode.bin   || 
+[13:26:21  ba86eaa]:info2:Sending 'xbl_sc_test_mode' (64 KB)                 OKAY [  0.002s]
+[13:26:21  ba86eaa]:info2:Writing 'xbl_sc_test_mode'                         OKAY [  0.003s]
+[13:26:21  ba86eaa]:info2:Finished. Total time: 0.028s
+[13:26:21  ba86eaa]:info1:$fastboot -s devicename erase imagefv_ab   || 
+[13:26:21  ba86eaa]:info2:Erasing 'imagefv_ab'                               (bootloader) Partition imagefv_a erase successfully
+[13:26:21  ba86eaa]:info2:(bootloader) Partition imagefv_b erase successfully
+[13:26:21  ba86eaa]:info2:OKAY [  0.044s]
+[13:26:21  ba86eaa]:info2:Finished. Total time: 0.054s
+[13:26:21  ba86eaa]:info1:$fastboot -s devicename flash imagefv_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/imagefv.elf   || 
+[13:26:21  ba86eaa]:info2:Sending 'imagefv_ab' (6151 KB)                     OKAY [  0.170s]
+[13:26:21  ba86eaa]:info2:Writing 'imagefv_ab'                               (bootloader) Partition imagefv_a flashed successfully
+[13:26:21  ba86eaa]:info2:(bootloader) Partition imagefv_b flashed successfully
+[13:26:21  ba86eaa]:info2:OKAY [  0.267s]
+[13:26:21  ba86eaa]:info2:Finished. Total time: 0.461s
+[13:26:21  ba86eaa]:info1:$fastboot -s devicename flash super D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/super.img   || 
+[13:26:57  ba86eaa]:info2:Sending sparse 'super' 1/10 (739688 KB)            OKAY [ 23.864s]
+[13:26:57  ba86eaa]:info2:Writing 'super'                                    OKAY [  0.001s]
+[13:27:14  ba86eaa]:info2:Sending sparse 'super' 2/10 (720896 KB)            OKAY [ 17.258s]
+[13:27:34  ba86eaa]:info2:Writing 'super'                                    OKAY [ 20.245s]
+[13:27:57  ba86eaa]:info2:Sending sparse 'super' 3/10 (720896 KB)            OKAY [ 22.429s]
+[13:28:11  ba86eaa]:info2:Writing 'super'                                    OKAY [ 14.219s]
+[13:28:32  ba86eaa]:info2:Sending sparse 'super' 4/10 (720896 KB)            OKAY [ 20.855s]
+[13:28:48  ba86eaa]:info2:Writing 'super'                                    OKAY [ 15.822s]
+[13:29:10  ba86eaa]:info2:Sending sparse 'super' 5/10 (769148 KB)            OKAY [ 22.692s]
+[13:29:24  ba86eaa]:info2:Writing 'super'                                    OKAY [ 13.987s]
+[13:29:44  ba86eaa]:info2:Sending sparse 'super' 6/10 (773612 KB)            OKAY [ 19.679s]
+[13:30:03  ba86eaa]:info2:Writing 'super'                                    OKAY [ 18.739s]
+[13:30:24  ba86eaa]:info2:Sending sparse 'super' 7/10 (749980 KB)            OKAY [ 20.855s]
+[13:30:42  ba86eaa]:info2:Writing 'super'                                    OKAY [ 18.681s]
+[13:31:00  ba86eaa]:info2:Sending sparse 'super' 8/10 (726988 KB)            OKAY [ 18.097s]
+[13:31:20  ba86eaa]:info2:Writing 'super'                                    OKAY [ 19.330s]
+[13:31:42  ba86eaa]:info2:Sending sparse 'super' 9/10 (720896 KB)            OKAY [ 22.753s]
+[13:31:57  ba86eaa]:info2:Writing 'super'                                    OKAY [ 14.245s]
+[13:32:01  ba86eaa]:info2:Sending sparse 'super' 10/10 (133084 KB)           OKAY [  4.289s]
+[13:32:33  ba86eaa]:info2:Writing 'super'                                    OKAY [ 32.434s]
+[13:32:33  ba86eaa]:info2:Finished. Total time: 371.967s
+[13:32:33  ba86eaa]:info1:$fastboot -s devicename flash vendor_boot_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/vendor_boot.img   || 
+[13:32:37  ba86eaa]:info2:Sending 'vendor_boot_ab' (98304 KB)                OKAY [  2.357s]
+[13:32:45  ba86eaa]:info2:Writing 'vendor_boot_ab'                           (bootloader) Partition vendor_boot_a flashed successfully
+[13:32:46  ba86eaa]:info2:(bootloader) Partition vendor_boot_b flashed successfully
+[13:32:46  ba86eaa]:info2:OKAY [  8.795s]
+[13:32:46  ba86eaa]:info2:Finished. Total time: 12.106s
+[13:32:46  ba86eaa]:info1:$fastboot -s devicename flash dtbo_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/dtbo.img   || 
+[13:32:46  ba86eaa]:info2:Sending 'dtbo_ab' (24576 KB)                       OKAY [  0.609s]
+[13:32:47  ba86eaa]:info2:Writing 'dtbo_ab'                                  (bootloader) Partition dtbo_a flashed successfully
+[13:32:47  ba86eaa]:info2:(bootloader) Partition dtbo_b flashed successfully
+[13:32:47  ba86eaa]:info2:OKAY [  1.046s]
+[13:32:47  ba86eaa]:info2:Finished. Total time: 1.674s
+[13:32:47  ba86eaa]:info1:$fastboot -s devicename flash vbmeta_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/vbmeta.img   || 
+[13:32:47  ba86eaa]:info2:Sending 'vbmeta_ab' (8 KB)                         OKAY [  0.002s]
+[13:32:47  ba86eaa]:info2:Writing 'vbmeta_ab'                                (bootloader) Partition vbmeta_a flashed successfully
+[13:32:47  ba86eaa]:info2:(bootloader) Partition vbmeta_b flashed successfully
+[13:32:47  ba86eaa]:info2:OKAY [  0.002s]
+[13:32:47  ba86eaa]:info2:Finished. Total time: 0.028s
+[13:32:47  ba86eaa]:info1:$fastboot -s devicename flash vbmeta_system_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/vbmeta_system.img   || 
+[13:32:47  ba86eaa]:info2:Sending 'vbmeta_system_ab' (4 KB)                  OKAY [  0.002s]
+[13:32:47  ba86eaa]:info2:Writing 'vbmeta_system_ab'                         (bootloader) Partition vbmeta_system_a flashed successfully
+[13:32:47  ba86eaa]:info2:(bootloader) Partition vbmeta_system_b flashed successfully
+[13:32:47  ba86eaa]:info2:OKAY [  0.001s]
+[13:32:47  ba86eaa]:info2:Finished. Total time: 0.023s
+[13:32:47  ba86eaa]:info1:$fastboot -s devicename erase metadata   || 
+[13:32:47  ba86eaa]:info2:Erasing 'metadata'                                 OKAY [  0.017s]
+[13:32:47  ba86eaa]:info2:Finished. Total time: 0.027s
+[13:32:47  ba86eaa]:info1:$fastboot -s devicename flash metadata D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/metadata.img   || 
+[13:32:47  ba86eaa]:info2:Sending 'metadata' (44 KB)                         OKAY [  0.003s]
+[13:32:47  ba86eaa]:info2:Writing 'metadata'                                 OKAY [  0.003s]
+[13:32:47  ba86eaa]:info2:Finished. Total time: 0.025s
+[13:32:47  ba86eaa]:info1:$fastboot -s devicename flash userdata D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/userdata.img   || 
+[13:32:48  ba86eaa]:info2:Sending 'userdata' (2632 KB)                       OKAY [  0.082s]
+[13:32:48  ba86eaa]:info2:Writing 'userdata'                                 OKAY [  0.010s]
+[13:32:48  ba86eaa]:info2:Finished. Total time: 0.117s
+[13:32:48  ba86eaa]:info1:$fastboot -s devicename flash vm-bootsys_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/vm-bootsys.img   || 
+[13:32:54  ba86eaa]:info2:Sending 'vm-bootsys_ab' (246128 KB)                OKAY [  6.100s]
+[13:33:06  ba86eaa]:info2:Writing 'vm-bootsys_ab'                            (bootloader) Partition vm-bootsys_a flashed successfully
+[13:33:19  ba86eaa]:info2:(bootloader) Partition vm-bootsys_b flashed successfully
+[13:33:19  ba86eaa]:info2:OKAY [ 24.896s]
+[13:33:19  ba86eaa]:info2:Finished. Total time: 31.273s
+[13:33:19  ba86eaa]:info1:$fastboot -s devicename flash cust D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/cust.img   || 
+[13:33:27  ba86eaa]:info2:Sending 'cust' (325300 KB)                         OKAY [  7.946s]
+[13:33:27  ba86eaa]:info2:Writing 'cust'                                     OKAY [  0.002s]
+[13:33:27  ba86eaa]:info2:Finished. Total time: 8.258s
+[13:33:27  ba86eaa]:info1:$fastboot -s devicename flash recovery_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/recovery.img   || 
+[13:33:31  ba86eaa]:info2:Sending 'recovery_ab' (102400 KB)                  OKAY [  3.604s]
+[13:33:47  ba86eaa]:info2:Writing 'recovery_ab'                              (bootloader) Partition recovery_a flashed successfully
+[13:33:47  ba86eaa]:info2:(bootloader) Partition recovery_b flashed successfully
+[13:33:47  ba86eaa]:info2:OKAY [ 16.253s]
+[13:33:47  ba86eaa]:info2:Finished. Total time: 20.082s
+[13:33:47  ba86eaa]:info1:$fastboot -s devicename flash boot_ab D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images/boot.img   || 
+[13:33:52  ba86eaa]:info2:Sending 'boot_ab' (196608 KB)                      OKAY [  4.602s]
+[13:34:00  ba86eaa]:info2:Writing 'boot_ab'                                  (bootloader) Partition boot_a flashed successfully
+[13:34:00  ba86eaa]:info2:(bootloader) Partition boot_b flashed successfully
+[13:34:00  ba86eaa]:info2:OKAY [  8.432s]
+[13:34:00  ba86eaa]:info2:Finished. Total time: 13.059s
+[13:34:00  ba86eaa]:info1:$fastboot -s devicename flash misc D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\images\misc.img   || 
+[13:34:01  ba86eaa]:info2:Sending 'misc' (8 KB)                              OKAY [  0.002s]
+[13:34:01  ba86eaa]:info2:Writing 'misc'                                     OKAY [  0.000s]
+[13:34:01  ba86eaa]:info2:Finished. Total time: 0.022s
+[13:34:01  ba86eaa]:info1:$fastboot -s devicename set_active a   || 
+[13:34:01  ba86eaa]:info2:Setting current slot to 'a'                        OKAY [  0.007s]
+[13:34:01  ba86eaa]:info2:Finished. Total time: 0.011s
+[13:34:01  ba86eaa]:info1:$fastboot -s devicename reboot   || 
+[13:34:01  ba86eaa]:info2:Rebooting                                          OKAY [  0.001s]
+[13:34:01  ba86eaa]:info2:Finished. Total time: 0.001s
+[13:34:01  ba86eaa]:begin FlashDone
+[13:34:01  ba86eaa]:errMsg is null
+[13:34:01  ba86eaa]:begin checkPoint
+[13:34:01  ba86eaa]:error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done
+[13:34:01  ba86eaa]:process exit.
+[13:34:01  ba86eaa]:flashSuccess False
+[13:34:01  ba86eaa]:isFactory False CheckCPUID False
+[13:34:01  ba86eaa]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[13:34:01  ba86eaa]:after:flashSuccess is False set IsUpdate:false set IsDone true

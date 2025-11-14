@@ -1,0 +1,19 @@
+[13:39:35  ae7e553e]:MiFlash 2020.3.14.0
+[13:39:35  ae7e553e]:vboytest index:1
+[13:39:35  ae7e553e]:idproduct: 53261 idvendor: 6353
+[13:39:35  ae7e553e]:Thread id:11 Thread name:ae7e553e
+[13:39:35  ae7e553e]:image path:D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0
+[13:39:35  ae7e553e]:env android path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Google\Android"
+[13:39:35  ae7e553e]:script :D:\Desktop\刷机工具\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\liuqin_images_OS1.0.11.0.UMYCNXM_20240920.0000.00_14.0_cn_d5c06831af\liuqin_images_OS1.0.11.0.UMYCNXM_14.0\flash_all.bat
+[13:39:35  ae7e553e]:Physical Memory Usage:4157440 Byte
+[13:39:35  ae7e553e]:start process id 22016 name cmd
+[13:39:35  ae7e553e]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *liuqin"   || echo Missmatching image and device 
+[13:39:35  ae7e553e]:info1:Missmatching image and device
+[13:39:35  ae7e553e]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *liuqin"   || exit /B 1 
+[13:39:35  ae7e553e]:begin FlashDone
+[13:39:35  ae7e553e]:error:Missmatching image and device
+[13:39:35  ae7e553e]:process exit.
+[13:39:35  ae7e553e]:flashSuccess False
+[13:39:35  ae7e553e]:isFactory False CheckCPUID False
+[13:39:35  ae7e553e]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[13:39:35  ae7e553e]:after:flashSuccess is False set IsUpdate:false set IsDone true

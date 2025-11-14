@@ -1,0 +1,10 @@
+[17:28:56  ae7e553e]:MiFlash 2020.3.14.0
+[17:28:56  ae7e553e]:vboytest index:0
+[17:28:56  ae7e553e]:idproduct: 0 idvendor: 0
+[17:28:56  ae7e553e]:Thread id:17 Thread name:ae7e553e
+[17:28:56  ae7e553e]:image path:D:\桌面\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0
+[17:28:56  ae7e553e]:env android path:"D:\桌面\刷机工具\mishuaji\Source\ThirdParty\Google\Android"
+[17:28:56  ae7e553e]:script :D:\桌面\Windows端-MI-ROM下载解限速4.1\Windows端-MI-ROM下载解限速4.1\Xiaomi-ROM-Download\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\flash_all_except_storage.bat
+[17:28:56  ae7e553e]:Physical Memory Usage:3665920 Byte
+[17:28:56  ae7e553e]:start process id 1508 name cmd
+[17:28:56  ae7e553e]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *socrates"   || echo Missmatching image and device 

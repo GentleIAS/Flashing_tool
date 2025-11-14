@@ -1,0 +1,3 @@
+[17:34:14]:1    ba86eaa     492.0566134s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done
+[17:43:50]:1    ba86eaa     492.6267162s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done
+[18:29:54]:1    ba86eaa     494.0206621s     flash done

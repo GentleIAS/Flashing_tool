@@ -1,0 +1,89 @@
+[17:25:23]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:23]:create RegistryKey Software\XiaoMi\MiFlash\
+[17:25:23]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Google\Driver\android_winusb.inf to C:\Windows\INF\oem78.inf,result True,GetLastWin32Error 
+[17:25:23]:set RegistryKey value:android_winusb.inf--oem78.inf
+[17:25:23]:mkdir "C:\Users\20372\.android"
+[17:25:23]:output:×ÓÄ¿Â¼»òÎÄ¼ş C:\Users\20372\.android ÒÑ¾­´æÔÚ¡£
+
+[17:25:23]: echo 0x2717 >>"C:\Users\20372\.android\adb_usb.ini"
+[17:25:23]:output:
+[17:25:23]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:24]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Nvidia\Driver\NvidiaUsb.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[17:25:24]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:24]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Microsoft\Driver\tetherxp.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[17:25:24]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:24]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Microsoft\Driver\wpdmtphw.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[17:25:24]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:25]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Qualcomm\Driver\qcser.inf to C:\Windows\INF\oem124.inf,result True,GetLastWin32Error 
+[17:25:25]:set RegistryKey value:qcser.inf--oem124.inf
+[17:25:28]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:28]:driver oem78.inf exists,uninstall,reuslt True,GetLastWin32Error
+[17:25:29]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Google\Driver\android_winusb.inf to C:\Windows\INF\oem78.inf,result True,GetLastWin32Error 
+[17:25:29]:set RegistryKey value:android_winusb.inf--oem78.inf
+[17:25:29]:mkdir "C:\Users\20372\.android"
+[17:25:29]:output:×ÓÄ¿Â¼»òÎÄ¼ş C:\Users\20372\.android ÒÑ¾­´æÔÚ¡£
+
+[17:25:29]: echo 0x2717 >>"C:\Users\20372\.android\adb_usb.ini"
+[17:25:29]:output:
+[17:25:29]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:29]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Nvidia\Driver\NvidiaUsb.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[17:25:29]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:29]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Microsoft\Driver\tetherxp.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[17:25:29]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:29]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Microsoft\Driver\wpdmtphw.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[17:25:29]:open RegistryKey Software\XiaoMi\MiFlash\
+[17:25:30]:driver oem124.inf exists,uninstall,reuslt True,GetLastWin32Error
+[17:25:30]:install driver D:\×ÀÃæ\Ë¢»ú¹¤¾ß\mishuaji\Source\ThirdParty\Qualcomm\Driver\qcser.inf to C:\Windows\INF\oem124.inf,result True,GetLastWin32Error 
+[17:25:30]:set RegistryKey value:qcser.inf--oem124.inf
+[17:25:34]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:25:34]:GetScriptDevices
+[17:26:13]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:13]:GetScriptDevices
+[17:26:15]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:15]:GetScriptDevices
+[17:26:15]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:15]:GetScriptDevices
+[17:26:16]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:16]:GetScriptDevices
+[17:26:17]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:17]:GetScriptDevices
+[17:26:17]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:18]:GetScriptDevices
+[17:26:18]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:18]:GetScriptDevices
+[17:26:19]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:19]:GetScriptDevices
+[17:26:19]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:19]:GetScriptDevices
+[17:26:19]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:19]:GetScriptDevices
+[17:26:19]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:19]:GetScriptDevices
+[17:26:19]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:19]:GetScriptDevices
+[17:26:20]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:20]:GetScriptDevices
+[17:26:58]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:26:58]:GetScriptDevices
+[17:27:01]:add device ae7e553e index 0
+[17:28:37]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:28:37]:GetScriptDevices
+[17:28:40]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[17:28:40]:add device ae7e553e index 0
+[17:28:40]:Thread start,thread id 21,thread name ae7e553e
+[17:28:41]:Thread stopped, thread id 21, thread name ae7e553e
+[17:28:53]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:28:53]:GetScriptDevices
+[17:28:56]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[17:28:56]:add device ae7e553e index 0
+[17:28:56]:Thread start,thread id 17,thread name ae7e553e
+[17:28:56]:start process id 1508 name cmd
+[17:56:46]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:56:46]:GetScriptDevices
+[17:56:49]:Dulicate device ae7e553e
+[17:56:49]:ae7e553e already in flashing
+[17:56:52]:lsusb path:"D:\æ¡Œé¢\åˆ·æœºå·¥å…·\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[17:56:52]:GetScriptDevices
+[17:56:55]:Dulicate device ae7e553e
+[17:57:00]:GetUserInfo
+[17:57:51]:Login failed. errcode:2 lasterr:ç³»ç»Ÿæ‰¾ä¸åˆ°æŒ‡å®šçš„æ–‡ä»¶ã€‚

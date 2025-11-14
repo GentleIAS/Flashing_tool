@@ -1,0 +1,5 @@
+[13:39:10]:1    ae7e553e     0.5248265s     error:Missmatching image and device
+[13:39:35]:1    ae7e553e     0.5010008s     error:Missmatching image and device
+[13:51:04]:1    ae7e553e     478.1714571s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done
+[16:41:30]:1    ba86eaa     490.6243759s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done
+[16:50:26]:1    ba86eaa     489.7269812s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done

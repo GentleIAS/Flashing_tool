@@ -1,0 +1,283 @@
+[11:29:32  ae7e553e]:MiFlash 2020.3.14.0
+[11:29:32  ae7e553e]:vboytest index:1
+[11:29:32  ae7e553e]:idproduct: 53261 idvendor: 6353
+[11:29:32  ae7e553e]:Thread id:11 Thread name:ae7e553e
+[11:29:32  ae7e553e]:image path:D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0
+[11:29:32  ae7e553e]:env android path:"D:\桌面\刷机工具\mishuaji\Source\ThirdParty\Google\Android"
+[11:29:32  ae7e553e]:script :D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\flash_all_except_storage.bat
+[11:29:32  ae7e553e]:Physical Memory Usage:3653632 Byte
+[11:29:32  ae7e553e]:start process id 14496 name cmd
+[11:29:32  ae7e553e]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *socrates"   || echo Missmatching image and device 
+[11:29:32  ae7e553e]:info1:product: socrates
+[11:29:32  ae7e553e]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *socrates"   || exit /B 1 
+[11:29:32  ae7e553e]:info1:product: socrates
+[11:29:32  ae7e553e]:info1:$if exist "D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images\anti_version.txt" (for /F "usebackq" %a in ("D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images\anti_version.txt") do (set CURRENT_ANTI_VER=%a ) ) 
+[11:29:32  ae7e553e]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[11:29:32  ae7e553e]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[11:29:32  ae7e553e]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[11:29:32  ae7e553e]:info1:$(set version=1 ) 
+[11:29:32  ae7e553e]:info1:$if [1] EQU [] set version=0 
+[11:29:32  ae7e553e]:info1:$set anticheck="antirollback check pass" 
+[11:29:32  ae7e553e]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[11:29:32  ae7e553e]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[11:29:32  ae7e553e]:info1:"antirollback check pass" 
+[11:29:32  ae7e553e]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[11:29:32  ae7e553e]:info1:fastboot -s devicename flash crclist D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images\crclist.txt   ||  
+[11:29:32  ae7e553e]:info1: fastboot -s devicename flash sparsecrclist D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images\sparsecrclist.txt   || 
+[11:29:32  ae7e553e]:info1:) 
+[11:29:32  ae7e553e]:info1:crc: 1
+[11:29:32  ae7e553e]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.002s]
+[11:29:32  ae7e553e]:info2:Writing 'crclist'                                  OKAY [  0.004s]
+[11:29:32  ae7e553e]:info2:Finished. Total time: 0.025s
+[11:29:32  ae7e553e]:info2:Sending 'sparsecrclist' (0 KB)                     OKAY [  0.002s]
+[11:29:32  ae7e553e]:info2:Writing 'sparsecrclist'                            OKAY [  0.002s]
+[11:29:32  ae7e553e]:info2:Finished. Total time: 0.026s
+[11:29:32  ae7e553e]:info1:$fastboot -s devicename erase boot_ab   || 
+[11:29:32  ae7e553e]:info2:Erasing 'boot_ab'                                  (bootloader) Partition boot_a erase successfully
+[11:29:32  ae7e553e]:info2:(bootloader) Partition boot_b erase successfully
+[11:29:32  ae7e553e]:info2:OKAY [  0.020s]
+[11:29:32  ae7e553e]:info2:Finished. Total time: 0.032s
+[11:29:32  ae7e553e]:info1:$fastboot -s devicename flash abl_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/abl.elf   || 
+[11:29:32  ae7e553e]:info2:Sending 'abl_ab' (227 KB)                          OKAY [  0.009s]
+[11:29:32  ae7e553e]:info2:Writing 'abl_ab'                                   (bootloader) Partition abl_a flashed successfully
+[11:29:32  ae7e553e]:info2:(bootloader) Partition abl_b flashed successfully
+[11:29:32  ae7e553e]:info2:OKAY [  0.013s]
+[11:29:32  ae7e553e]:info2:Finished. Total time: 0.042s
+[11:29:32  ae7e553e]:info1:$fastboot -s devicename flash xbl_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/xbl_s.melf   || 
+[11:29:32  ae7e553e]:info2:Sending 'xbl_ab' (1170 KB)                         OKAY [  0.039s]
+[11:29:33  ae7e553e]:info2:Writing 'xbl_ab'                                   (bootloader) Partition xbl_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition xbl_b flashed successfully
+[11:29:33  ae7e553e]:info2:OKAY [  0.077s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.134s
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash xbl_config_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/xbl_config.elf   || 
+[11:29:33  ae7e553e]:info2:Sending 'xbl_config_ab' (180 KB)                   OKAY [  0.008s]
+[11:29:33  ae7e553e]:info2:Writing 'xbl_config_ab'                            (bootloader) Partition xbl_config_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition xbl_config_b flashed successfully
+[11:29:33  ae7e553e]:info2:OKAY [  0.019s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.047s
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash shrm_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/shrm.elf   || 
+[11:29:33  ae7e553e]:info2:Sending 'shrm_ab' (62 KB)                          OKAY [  0.004s]
+[11:29:33  ae7e553e]:info2:Writing 'shrm_ab'                                  (bootloader) Partition shrm_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition shrm_b flashed successfully
+[11:29:33  ae7e553e]:info2:OKAY [  0.007s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.029s
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash aop_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/aop.mbn   || 
+[11:29:33  ae7e553e]:info2:Sending 'aop_ab' (272 KB)                          OKAY [  0.011s]
+[11:29:33  ae7e553e]:info2:Writing 'aop_ab'                                   (bootloader) Partition aop_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition aop_b flashed successfully
+[11:29:33  ae7e553e]:info2:OKAY [  0.014s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.043s
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash aop_config_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/aop_devcfg.mbn   || 
+[11:29:33  ae7e553e]:info2:Sending 'aop_config_ab' (15 KB)                    OKAY [  0.002s]
+[11:29:33  ae7e553e]:info2:Writing 'aop_config_ab'                            (bootloader) Partition aop_config_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition aop_config_b flashed successfully
+[11:29:33  ae7e553e]:info2:OKAY [  0.003s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.029s
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash tz_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/tz.mbn   || 
+[11:29:33  ae7e553e]:info2:Sending 'tz_ab' (3852 KB)                          OKAY [  0.125s]
+[11:29:33  ae7e553e]:info2:Writing 'tz_ab'                                    (bootloader) Partition tz_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition tz_b flashed successfully
+[11:29:33  ae7e553e]:info2:OKAY [  0.158s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.300s
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash devcfg_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/devcfg.mbn   || 
+[11:29:33  ae7e553e]:info2:Sending 'devcfg_ab' (55 KB)                        OKAY [  0.004s]
+[11:29:33  ae7e553e]:info2:Writing 'devcfg_ab'                                (bootloader) Partition devcfg_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition devcfg_b flashed successfully
+[11:29:33  ae7e553e]:info2:OKAY [  0.006s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.029s
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash featenabler_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/featenabler.mbn   || 
+[11:29:33  ae7e553e]:info2:Sending 'featenabler_ab' (94 KB)                   OKAY [  0.005s]
+[11:29:33  ae7e553e]:info2:Writing 'featenabler_ab'                           (bootloader) Partition featenabler_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition featenabler_b flashed successfully
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash hyp_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/hypvmperformance.mbn   || 
+[11:29:33  ae7e553e]:info2:OKAY [  0.007s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.034s
+[11:29:33  ae7e553e]:info2:Sending 'hyp_ab' (1418 KB)                         OKAY [  0.046s]
+[11:29:33  ae7e553e]:info2:Writing 'hyp_ab'                                   (bootloader) Partition hyp_a flashed successfully
+[11:29:33  ae7e553e]:info2:(bootloader) Partition hyp_b flashed successfully
+[11:29:33  ae7e553e]:info2:OKAY [  0.059s]
+[11:29:33  ae7e553e]:info2:Finished. Total time: 0.125s
+[11:29:33  ae7e553e]:info1:$fastboot -s devicename flash uefi_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/uefi.elf   || 
+[11:29:34  ae7e553e]:info2:Sending 'uefi_ab' (2875 KB)                        OKAY [  0.094s]
+[11:29:34  ae7e553e]:info2:Writing 'uefi_ab'                                  (bootloader) Partition uefi_a flashed successfully
+[11:29:34  ae7e553e]:info2:(bootloader) Partition uefi_b flashed successfully
+[11:29:34  ae7e553e]:info2:OKAY [  0.116s]
+[11:29:34  ae7e553e]:info2:Finished. Total time: 0.231s
+[11:29:34  ae7e553e]:info1:$fastboot -s devicename flash uefisecapp_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/uefi_sec.mbn   || 
+[11:29:34  ae7e553e]:info2:Sending 'uefisecapp_ab' (172 KB)                   OKAY [  0.007s]
+[11:29:34  ae7e553e]:info2:Writing 'uefisecapp_ab'                            (bootloader) Partition uefisecapp_a flashed successfully
+[11:29:34  ae7e553e]:info2:(bootloader) Partition uefisecapp_b flashed successfully
+[11:29:34  ae7e553e]:info2:OKAY [  0.010s]
+[11:29:34  ae7e553e]:info2:Finished. Total time: 0.037s
+[11:29:34  ae7e553e]:info1:$fastboot -s devicename flash modem_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/NON-HLOS.bin   || 
+[11:29:45  ae7e553e]:info2:Sending 'modem_ab' (359628 KB)                     OKAY [ 11.502s]
+[11:29:59  ae7e553e]:info2:Writing 'modem_ab'                                 (bootloader) Partition modem_a flashed successfully
+[11:29:59  ae7e553e]:info2:(bootloader) Partition modem_b flashed successfully
+[11:29:59  ae7e553e]:info2:OKAY [ 13.955s]
+[11:29:59  ae7e553e]:info2:Finished. Total time: 25.479s
+[11:29:59  ae7e553e]:info1:$fastboot -s devicename flash bluetooth_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/BTFM.bin   || 
+[11:29:59  ae7e553e]:info2:Sending 'bluetooth_ab' (1228 KB)                   OKAY [  0.039s]
+[11:29:59  ae7e553e]:info2:Writing 'bluetooth_ab'                             (bootloader) Partition bluetooth_a flashed successfully
+[11:29:59  ae7e553e]:info2:(bootloader) Partition bluetooth_b flashed successfully
+[11:29:59  ae7e553e]:info2:OKAY [  0.055s]
+[11:29:59  ae7e553e]:info2:Finished. Total time: 0.114s
+[11:29:59  ae7e553e]:info1:$fastboot -s devicename flash dsp_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/dspso.bin   || 
+[11:30:02  ae7e553e]:info2:Sending 'dsp_ab' (65536 KB)                        OKAY [  2.096s]
+[11:30:04  ae7e553e]:info2:Writing 'dsp_ab'                                   (bootloader) Partition dsp_a flashed successfully
+[11:30:04  ae7e553e]:info2:(bootloader) Partition dsp_b flashed successfully
+[11:30:04  ae7e553e]:info2:OKAY [  2.549s]
+[11:30:04  ae7e553e]:info2:Finished. Total time: 4.664s
+[11:30:04  ae7e553e]:info1:$fastboot -s devicename flash keymaster_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/keymint.mbn   || 
+[11:30:04  ae7e553e]:info2:Sending 'keymaster_ab' (396 KB)                    OKAY [  0.015s]
+[11:30:04  ae7e553e]:info2:Writing 'keymaster_ab'                             (bootloader) Partition keymaster_a flashed successfully
+[11:30:04  ae7e553e]:info2:(bootloader) Partition keymaster_b flashed successfully
+[11:30:04  ae7e553e]:info2:OKAY [  0.021s]
+[11:30:04  ae7e553e]:info2:Finished. Total time: 0.057s
+[11:30:04  ae7e553e]:info1:$fastboot -s devicename flash qupfw_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/qupv3fw.elf   || 
+[11:30:04  ae7e553e]:info2:Sending 'qupfw_ab' (52 KB)                         OKAY [  0.003s]
+[11:30:04  ae7e553e]:info2:Writing 'qupfw_ab'                                 (bootloader) Partition qupfw_a flashed successfully
+[11:30:04  ae7e553e]:info2:(bootloader) Partition qupfw_b flashed successfully
+[11:30:04  ae7e553e]:info2:OKAY [  0.007s]
+[11:30:04  ae7e553e]:info2:Finished. Total time: 0.029s
+[11:30:04  ae7e553e]:info1:$fastboot -s devicename flash multiimgoem_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/multi_image.mbn   || 
+[11:30:04  ae7e553e]:info2:Sending 'multiimgoem_ab' (32 KB)                   OKAY [  0.003s]
+[11:30:04  ae7e553e]:info2:Writing 'multiimgoem_ab'                           (bootloader) Partition multiimgoem_a flashed successfully
+[11:30:04  ae7e553e]:info2:(bootloader) Partition multiimgoem_b flashed successfully
+[11:30:04  ae7e553e]:info2:OKAY [  0.010s]
+[11:30:04  ae7e553e]:info2:Finished. Total time: 0.032s
+[11:30:04  ae7e553e]:info1:$fastboot -s devicename flash multiimgqti_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/multi_image_qti.mbn   || 
+[11:30:04  ae7e553e]:info2:Sending 'multiimgqti_ab' (11 KB)                   OKAY [  0.002s]
+[11:30:04  ae7e553e]:info2:Writing 'multiimgqti_ab'                           (bootloader) Partition multiimgqti_a flashed successfully
+[11:30:04  ae7e553e]:info2:(bootloader) Partition multiimgqti_b flashed successfully
+[11:30:04  ae7e553e]:info2:OKAY [  0.010s]
+[11:30:04  ae7e553e]:info2:Finished. Total time: 0.032s
+[11:30:04  ae7e553e]:info1:$fastboot -s devicename flash cpucp_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/cpucp.elf   || 
+[11:30:04  ae7e553e]:info2:Sending 'cpucp_ab' (187 KB)                        OKAY [  0.008s]
+[11:30:04  ae7e553e]:info2:Writing 'cpucp_ab'                                 (bootloader) Partition cpucp_a flashed successfully
+[11:30:04  ae7e553e]:info2:(bootloader) Partition cpucp_b flashed successfully
+[11:30:04  ae7e553e]:info2:OKAY [  0.011s]
+[11:30:04  ae7e553e]:info2:Finished. Total time: 0.037s
+[11:30:04  ae7e553e]:info1:$fastboot -s devicename flash logfs D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/logfs_ufs_8mb.bin   || 
+[11:30:04  ae7e553e]:info2:Sending 'logfs' (16 KB)                            OKAY [  0.003s]
+[11:30:04  ae7e553e]:info2:Writing 'logfs'                                    OKAY [  0.002s]
+[11:30:04  ae7e553e]:info2:Finished. Total time: 0.024s
+[11:30:04  ae7e553e]:info1:$fastboot -s devicename flash rescue D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/rescue.img   || 
+[11:30:04  ae7e553e]:info2:Sending 'rescue' (40 KB)                           OKAY [  0.003s]
+[11:30:04  ae7e553e]:info2:Writing 'rescue'                                   OKAY [  0.005s]
+[11:30:04  ae7e553e]:info2:Finished. Total time: 0.026s
+[11:30:04  ae7e553e]:info1:$fastboot -s devicename flash storsec D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/storsec.mbn   || 
+[11:30:05  ae7e553e]:info2:Sending 'storsec' (32 KB)                          OKAY [  0.003s]
+[11:30:05  ae7e553e]:info2:Writing 'storsec'                                  OKAY [  0.004s]
+[11:30:05  ae7e553e]:info2:Finished. Total time: 0.026s
+[11:30:05  ae7e553e]:info1:$fastboot -s devicename flash toolsfv D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/tools.fv   || 
+[11:30:05  ae7e553e]:info2:Sending 'toolsfv' (384 KB)                         OKAY [  0.016s]
+[11:30:05  ae7e553e]:info2:Writing 'toolsfv'                                  OKAY [  0.019s]
+[11:30:05  ae7e553e]:info2:Finished. Total time: 0.052s
+[11:30:05  ae7e553e]:info1:$fastboot -s devicename flash xbl_ramdump_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/XblRamdump.elf   || 
+[11:30:05  ae7e553e]:info2:Sending 'xbl_ramdump_ab' (839 KB)                  OKAY [  0.028s]
+[11:30:05  ae7e553e]:info2:Writing 'xbl_ramdump_ab'                           (bootloader) Partition xbl_ramdump_a flashed successfully
+[11:30:05  ae7e553e]:info2:(bootloader) Partition xbl_ramdump_b flashed successfully
+[11:30:05  ae7e553e]:info2:OKAY [  0.038s]
+[11:30:05  ae7e553e]:info2:Finished. Total time: 0.086s
+[11:30:05  ae7e553e]:info1:$fastboot -s devicename erase imagefv_ab   || 
+[11:30:05  ae7e553e]:info2:Erasing 'imagefv_ab'                               (bootloader) Partition imagefv_a erase successfully
+[11:30:05  ae7e553e]:info2:(bootloader) Partition imagefv_b erase successfully
+[11:30:05  ae7e553e]:info2:OKAY [  0.009s]
+[11:30:05  ae7e553e]:info2:Finished. Total time: 0.023s
+[11:30:05  ae7e553e]:info1:$fastboot -s devicename flash imagefv_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/imagefv.elf   || 
+[11:30:05  ae7e553e]:info2:Sending 'imagefv_ab' (6151 KB)                     OKAY [  0.215s]
+[11:30:05  ae7e553e]:info2:Writing 'imagefv_ab'                               (bootloader) Partition imagefv_a flashed successfully
+[11:30:05  ae7e553e]:info2:(bootloader) Partition imagefv_b flashed successfully
+[11:30:05  ae7e553e]:info2:OKAY [  0.243s]
+[11:30:05  ae7e553e]:info2:Finished. Total time: 0.477s
+[11:30:05  ae7e553e]:info1:$fastboot -s devicename flash init_boot_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/init_boot.img   || 
+[11:30:06  ae7e553e]:info2:Sending 'init_boot_ab' (8192 KB)                   OKAY [  0.265s]
+[11:30:06  ae7e553e]:info2:Writing 'init_boot_ab'                             (bootloader) Partition init_boot_a flashed successfully
+[11:30:06  ae7e553e]:info2:(bootloader) Partition init_boot_b flashed successfully
+[11:30:06  ae7e553e]:info2:OKAY [  0.322s]
+[11:30:06  ae7e553e]:info2:Finished. Total time: 0.606s
+[11:30:06  ae7e553e]:info1:$fastboot -s devicename flash super D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/super.img   || 
+[11:30:39  ae7e553e]:info2:Sending sparse 'super' 1/11 (734952 KB)            OKAY [ 23.513s]
+[11:30:39  ae7e553e]:info2:Writing 'super'                                    OKAY [  0.003s]
+[11:31:03  ae7e553e]:info2:Sending sparse 'super' 2/11 (745216 KB)            OKAY [ 23.767s]
+[11:31:09  ae7e553e]:info2:Writing 'super'                                    OKAY [  5.864s]
+[11:31:32  ae7e553e]:info2:Sending sparse 'super' 3/11 (720896 KB)            OKAY [ 22.943s]
+[11:31:40  ae7e553e]:info2:Writing 'super'                                    OKAY [  7.582s]
+[11:32:03  ae7e553e]:info2:Sending sparse 'super' 4/11 (720896 KB)            OKAY [ 22.977s]
+[11:32:09  ae7e553e]:info2:Writing 'super'                                    OKAY [  6.643s]
+[11:32:32  ae7e553e]:info2:Sending sparse 'super' 5/11 (720896 KB)            OKAY [ 22.939s]
+[11:32:39  ae7e553e]:info2:Writing 'super'                                    OKAY [  6.678s]
+[11:33:02  ae7e553e]:info2:Sending sparse 'super' 6/11 (720896 KB)            OKAY [ 23.018s]
+[11:33:08  ae7e553e]:info2:Writing 'super'                                    OKAY [  6.129s]
+[11:33:33  ae7e553e]:info2:Sending sparse 'super' 7/11 (779740 KB)            OKAY [ 24.837s]
+[11:33:37  ae7e553e]:info2:Writing 'super'                                    OKAY [  4.261s]
+[11:34:00  ae7e553e]:info2:Sending sparse 'super' 8/11 (733124 KB)            OKAY [ 23.369s]
+[11:34:09  ae7e553e]:info2:Writing 'super'                                    OKAY [  8.519s]
+[11:34:33  ae7e553e]:info2:Sending sparse 'super' 9/11 (751092 KB)            OKAY [ 23.893s]
+[11:34:40  ae7e553e]:info2:Writing 'super'                                    OKAY [  7.228s]
+[11:35:03  ae7e553e]:info2:Sending sparse 'super' 10/11 (723240 KB)           OKAY [ 23.054s]
+[11:35:11  ae7e553e]:info2:Writing 'super'                                    OKAY [  8.069s]
+[11:35:22  ae7e553e]:info2:Sending sparse 'super' 11/11 (330240 KB)           OKAY [ 10.524s]
+[11:35:41  ae7e553e]:info2:Writing 'super'                                    OKAY [ 19.573s]
+[11:35:41  ae7e553e]:info2:Finished. Total time: 335.343s
+[11:35:41  ae7e553e]:info1:$fastboot -s devicename flash vendor_boot_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/vendor_boot.img   || 
+[11:35:44  ae7e553e]:info2:Sending 'vendor_boot_ab' (98304 KB)                OKAY [  3.140s]
+[11:35:59  ae7e553e]:info2:Writing 'vendor_boot_ab'                           (bootloader) Partition vendor_boot_a flashed successfully
+[11:35:59  ae7e553e]:info2:(bootloader) Partition vendor_boot_b flashed successfully
+[11:35:59  ae7e553e]:info2:OKAY [ 14.368s]
+[11:35:59  ae7e553e]:info2:Finished. Total time: 17.545s
+[11:35:59  ae7e553e]:info1:$fastboot -s devicename flash dtbo_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/dtbo.img   || 
+[11:35:59  ae7e553e]:info2:Sending 'dtbo_ab' (16384 KB)                       OKAY [  0.528s]
+[11:36:00  ae7e553e]:info2:Writing 'dtbo_ab'                                  (bootloader) Partition dtbo_a flashed successfully
+[11:36:00  ae7e553e]:info2:(bootloader) Partition dtbo_b flashed successfully
+[11:36:00  ae7e553e]:info2:OKAY [  0.638s]
+[11:36:00  ae7e553e]:info2:Finished. Total time: 1.186s
+[11:36:00  ae7e553e]:info1:$fastboot -s devicename flash vbmeta_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/vbmeta.img   || 
+[11:36:00  ae7e553e]:info2:Sending 'vbmeta_ab' (8 KB)                         OKAY [  0.004s]
+[11:36:00  ae7e553e]:info2:Writing 'vbmeta_ab'                                (bootloader) Partition vbmeta_a flashed successfully
+[11:36:00  ae7e553e]:info2:(bootloader) Partition vbmeta_b flashed successfully
+[11:36:00  ae7e553e]:info2:OKAY [  0.006s]
+[11:36:00  ae7e553e]:info2:Finished. Total time: 0.029s
+[11:36:00  ae7e553e]:info1:$fastboot -s devicename flash vbmeta_system_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/vbmeta_system.img   || 
+[11:36:00  ae7e553e]:info2:Sending 'vbmeta_system_ab' (4 KB)                  OKAY [  0.003s]
+[11:36:00  ae7e553e]:info2:Writing 'vbmeta_system_ab'                         (bootloader) Partition vbmeta_system_a flashed successfully
+[11:36:00  ae7e553e]:info2:(bootloader) Partition vbmeta_system_b flashed successfully
+[11:36:00  ae7e553e]:info2:OKAY [  0.007s]
+[11:36:00  ae7e553e]:info2:Finished. Total time: 0.031s
+[11:36:00  ae7e553e]:info1:$fastboot -s devicename flash cust D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/cust.img   || 
+[11:36:26  ae7e553e]:info2:Sending sparse 'cust' 1/2 (781084 KB)              OKAY [ 24.927s]
+[11:36:26  ae7e553e]:info2:Writing 'cust'                                     OKAY [  0.005s]
+[11:36:26  ae7e553e]:info2:Sending sparse 'cust' 2/2 (6184 KB)                OKAY [  0.231s]
+[11:36:58  ae7e553e]:info2:Writing 'cust'                                     OKAY [ 31.867s]
+[11:36:58  ae7e553e]:info2:Finished. Total time: 58.040s
+[11:36:58  ae7e553e]:info1:$fastboot -s devicename flash recovery_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/recovery.img   || 
+[11:37:02  ae7e553e]:info2:Sending 'recovery_ab' (102400 KB)                  OKAY [  3.270s]
+[11:37:06  ae7e553e]:info2:Writing 'recovery_ab'                              (bootloader) Partition recovery_a flashed successfully
+[11:37:06  ae7e553e]:info2:(bootloader) Partition recovery_b flashed successfully
+[11:37:06  ae7e553e]:info2:OKAY [  3.977s]
+[11:37:06  ae7e553e]:info2:Finished. Total time: 7.267s
+[11:37:06  ae7e553e]:info1:$fastboot -s devicename flash boot_ab D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images/boot.img   || 
+[11:37:09  ae7e553e]:info2:Sending 'boot_ab' (98304 KB)                       OKAY [  3.153s]
+[11:37:13  ae7e553e]:info2:Writing 'boot_ab'                                  (bootloader) Partition boot_a flashed successfully
+[11:37:13  ae7e553e]:info2:(bootloader) Partition boot_b flashed successfully
+[11:37:13  ae7e553e]:info2:OKAY [  3.815s]
+[11:37:13  ae7e553e]:info2:Finished. Total time: 6.987s
+[11:37:13  ae7e553e]:info1:$fastboot -s devicename flash misc D:\桌面\socrates_images_OS1.0.8.0.UMKCNXM_20240312.0000.00_14.0_cn_e7316c0c01\socrates_images_OS1.0.8.0.UMKCNXM_14.0\images\misc.img   || 
+[11:37:13  ae7e553e]:info2:Sending 'misc' (8 KB)                              OKAY [  0.001s]
+[11:37:13  ae7e553e]:info2:Writing 'misc'                                     OKAY [  0.005s]
+[11:37:13  ae7e553e]:info2:Finished. Total time: 0.027s
+[11:37:13  ae7e553e]:info1:$fastboot -s devicename set_active a   || 
+[11:37:13  ae7e553e]:info2:Setting current slot to 'a'                        OKAY [  0.008s]
+[11:37:13  ae7e553e]:info2:Finished. Total time: 0.014s
+[11:37:13  ae7e553e]:info1:$fastboot -s devicename reboot   || 
+[11:37:13  ae7e553e]:info2:Rebooting                                          OKAY [  0.001s]
+[11:37:13  ae7e553e]:info2:Finished. Total time: 0.001s
+[11:37:13  ae7e553e]:begin FlashDone
+[11:37:13  ae7e553e]:errMsg is null
+[11:37:13  ae7e553e]:begin checkPoint
+[11:37:13  ae7e553e]:error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done
+[11:37:13  ae7e553e]:process exit.
+[11:37:13  ae7e553e]:flashSuccess False
+[11:37:13  ae7e553e]:isFactory False CheckCPUID False
+[11:37:13  ae7e553e]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[11:37:13  ae7e553e]:after:flashSuccess is False set IsUpdate:false set IsDone true

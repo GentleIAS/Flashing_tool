@@ -1,0 +1,77 @@
+[0:34:45]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[0:34:45]:GetScriptDevices
+[0:34:45]:add device ba86eaa index 1
+[0:34:50]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[0:34:50]:GetScriptDevices
+[0:34:50]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[0:34:50]:add device ba86eaa index 1
+[0:34:50]:Thread start,thread id 9,thread name ba86eaa
+[0:34:50]:start process id 23364 name cmd
+[0:43:37]:Thread stopped, thread id 9, thread name ba86eaa
+[9:53:42]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[9:53:42]:GetScriptDevices
+[9:53:42]:add device ba86eaa index 1
+[9:53:46]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[9:53:46]:GetScriptDevices
+[9:53:46]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[9:53:46]:add device ba86eaa index 1
+[9:53:46]:Thread start,thread id 9,thread name ba86eaa
+[9:53:46]:start process id 14688 name cmd
+[10:02:22]:Thread stopped, thread id 9, thread name ba86eaa
+[10:03:53]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[10:03:53]:GetScriptDevices
+[10:03:53]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[10:03:53]:add device ba86eaa index 1
+[10:03:54]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[10:03:54]:GetScriptDevices
+[10:03:54]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[10:03:54]:add device ba86eaa index 1
+[10:03:54]:Thread start,thread id 12,thread name ba86eaa
+[10:03:54]:start process id 4300 name cmd
+[10:12:29]:Thread stopped, thread id 12, thread name ba86eaa
+[10:49:07]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[10:49:07]:GetScriptDevices
+[10:49:07]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[10:49:07]:add device ba86eaa index 1
+[10:49:11]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[10:49:11]:GetScriptDevices
+[10:49:12]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[10:49:12]:add device ba86eaa index 1
+[10:49:12]:Thread start,thread id 48,thread name ba86eaa
+[10:49:12]:start process id 15876 name cmd
+[10:57:47]:Thread stopped, thread id 48, thread name ba86eaa
+[11:07:16]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[11:07:16]:GetScriptDevices
+[11:07:16]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[11:07:17]:GetScriptDevices
+[11:07:29]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[11:07:29]:GetScriptDevices
+[11:07:29]:add device ba86eaa index 1
+[11:07:32]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[11:07:32]:GetScriptDevices
+[11:07:32]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[11:07:32]:add device ba86eaa index 1
+[11:07:32]:Thread start,thread id 13,thread name ba86eaa
+[11:07:32]:start process id 6840 name cmd
+[11:16:08]:Thread stopped, thread id 13, thread name ba86eaa
+[11:16:39]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[11:16:39]:GetScriptDevices
+[11:16:39]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[11:16:39]:add device ba86eaa index 1
+[11:16:41]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[11:16:41]:GetScriptDevices
+[11:16:41]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[11:16:41]:add device ba86eaa index 1
+[11:16:41]:Thread start,thread id 15,thread name ba86eaa
+[11:16:41]:start process id 3416 name cmd
+[11:25:16]:Thread stopped, thread id 15, thread name ba86eaa
+[12:35:48]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:35:48]:GetScriptDevices
+[12:35:48]:add device ba86eaa index 1
+[12:35:50]:lsusb path:"D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[12:35:51]:GetScriptDevices
+[12:35:51]:FlashingDevice.flashDeviceList.Remove ba86eaa
+[12:35:51]:add device ba86eaa index 1
+[12:35:51]:Thread start,thread id 10,thread name ba86eaa
+[12:35:51]:start process id 14876 name cmd
+[12:44:42]:Thread stopped, thread id 10, thread name ba86eaa

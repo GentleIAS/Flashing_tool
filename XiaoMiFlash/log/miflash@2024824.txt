@@ -1,0 +1,46 @@
+[13:15:33]:open RegistryKey Software\XiaoMi\MiFlash\
+[13:15:33]:create RegistryKey Software\XiaoMi\MiFlash\
+[13:15:34]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Google\Driver\android_winusb.inf to C:\Windows\INF\oem60.inf,result True,GetLastWin32Error 
+[13:15:34]:set RegistryKey value:android_winusb.inf--oem60.inf
+[13:15:34]:mkdir "C:\Users\sun78698\.android"
+[13:15:34]:output:子目录或文件 C:\Users\sun78698\.android 已经存在。
+
+[13:15:34]: echo 0x2717 >>"C:\Users\sun78698\.android\adb_usb.ini"
+[13:15:34]:output:
+[13:15:34]:open RegistryKey Software\XiaoMi\MiFlash\
+[13:15:35]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Nvidia\Driver\NvidiaUsb.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[13:15:35]:open RegistryKey Software\XiaoMi\MiFlash\
+[13:15:35]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Microsoft\Driver\tetherxp.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[13:15:35]:open RegistryKey Software\XiaoMi\MiFlash\
+[13:15:36]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Microsoft\Driver\wpdmtphw.inf to ,result False,GetLastWin32Error Unknown error (0xe000022f)
+[13:15:36]:open RegistryKey Software\XiaoMi\MiFlash\
+[13:15:36]:install driver D:\Desktop\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\Driver\qcser.inf to C:\Windows\INF\oem61.inf,result True,GetLastWin32Error 
+[13:15:36]:set RegistryKey value:qcser.inf--oem61.inf
+[14:15:54]:lsusb path:"D:\Desktop\鍒锋満宸ュ叿\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[14:15:54]:GetScriptDevices
+[14:15:54]:add device ae7e553e index 1
+[14:16:00]:lsusb path:"D:\Desktop\鍒锋満宸ュ叿\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[14:16:00]:GetScriptDevices
+[14:16:00]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[14:16:00]:add device ae7e553e index 1
+[14:16:00]:Thread start,thread id 9,thread name ae7e553e
+[14:16:00]:start process id 14316 name cmd
+[14:16:00]:Thread stopped, thread id 9, thread name ae7e553e
+[14:16:10]:lsusb path:"D:\Desktop\鍒锋満宸ュ叿\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[14:16:10]:GetScriptDevices
+[14:16:10]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[14:16:10]:add device ae7e553e index 1
+[14:16:10]:Thread start,thread id 21,thread name ae7e553e
+[14:16:10]:start process id 9804 name cmd
+[14:16:11]:Thread stopped, thread id 21, thread name ae7e553e
+[14:16:34]:lsusb path:"D:\Desktop\鍒锋満宸ュ叿\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[14:16:34]:GetScriptDevices
+[14:16:35]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[14:16:35]:add device ae7e553e index 1
+[14:16:37]:lsusb path:"D:\Desktop\鍒锋満宸ュ叿\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[14:16:38]:GetScriptDevices
+[14:16:38]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[14:16:38]:add device ae7e553e index 1
+[14:16:38]:Thread start,thread id 9,thread name ae7e553e
+[14:16:38]:start process id 15756 name cmd
+[14:24:23]:Thread stopped, thread id 9, thread name ae7e553e

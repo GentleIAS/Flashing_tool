@@ -1,0 +1,10 @@
+[11:27:07]:lsusb path:"D:\桌面\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[11:27:07]:GetScriptDevices
+[11:27:07]:add device ae7e553e index 1
+[11:29:32]:lsusb path:"D:\桌面\刷机工具\mishuaji\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[11:29:32]:GetScriptDevices
+[11:29:32]:FlashingDevice.flashDeviceList.Remove ae7e553e
+[11:29:32]:add device ae7e553e index 1
+[11:29:32]:Thread start,thread id 11,thread name ae7e553e
+[11:29:32]:start process id 14496 name cmd
+[11:37:13]:Thread stopped, thread id 11, thread name ae7e553e

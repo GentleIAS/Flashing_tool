@@ -1,0 +1,7 @@
+[0:43:37]:1    ba86eaa     527.489296s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done
+[10:02:22]:1    ba86eaa     516.127791s     error:fastboot: error: cannot load 'D:\Desktop\liuqin_images_OS2.0.6.0.VMYCNXM_20250318.0000.00_15.0_cn_c29f6de5df\liuqin_images_OS2.0.6.0.VMYCNXM_15.0\images/boot.img': No such file or directory
+[10:12:29]:1    ba86eaa     514.8807506s     error:fastboot: error: cannot load 'D:\Desktop\liuqin_images_OS2.0.6.0.VMYCNXM_20250318.0000.00_15.0_cn_c29f6de5df\liuqin_images_OS2.0.6.0.VMYCNXM_15.0\images/boot.img': No such file or directory
+[10:57:47]:1    ba86eaa     515.3103392s     error:fastboot: error: cannot load 'D:\Desktop\liuqin_images_OS2.0.6.0.VMYCNXM_20250318.0000.00_15.0_cn_c29f6de5df\liuqin_images_OS2.0.6.0.VMYCNXM_15.0\images/boot.img': No such file or directory
+[11:16:08]:1    ba86eaa     515.7541346s     error:fastboot: error: cannot load 'D:\Desktop\liuqin_images_OS2.0.6.0.VMYCNXM_20250318.0000.00_15.0_cn_c29f6de5df\liuqin_images_OS2.0.6.0.VMYCNXM_15.0\images/boot.img': No such file or directory
+[11:25:16]:1    ba86eaa     515.3842284s     error:fastboot: error: cannot load 'D:\Desktop\liuqin_images_OS2.0.6.0.VMYCNXM_20250318.0000.00_15.0_cn_c29f6de5df\liuqin_images_OS2.0.6.0.VMYCNXM_15.0\images/boot.img': No such file or directory
+[12:44:42]:1    ba86eaa     530.9399354s     error:Not catch checkpoint (\$fastboot -s .* lock),flash is not done
